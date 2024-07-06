@@ -56,7 +56,7 @@ class PySQL:
 
     def __del__(self):
         'Для красоты'
-        logging.info(' ')
+        logging.info(f'{'-' * 100}')
 
     def _psyconnect(self) -> psycopg2.connect:
         '''
@@ -452,7 +452,7 @@ def rand_info(parameter=None):
 
 init_logging()
 
-pysql = PySQL(database='pypost1', user=config.database_name, password=config.database_password)
+pysql = PySQL(database='pypost', user=config.database_name, password=config.database_password)
 
 info = {
     # 'client_id': 1,
